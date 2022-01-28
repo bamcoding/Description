@@ -1,5 +1,4 @@
 # Closure
-
 함수는 func 키워드를 사용해서 생성
 어떤 기능을 수행하는 코드 블록
 
@@ -16,7 +15,57 @@
 인자를 받을 수 있다.
 리턴할 수 있다.
 
+*컴플리션 블록*
+*하이 오더 펑션*
+
+**Closure Explession Syntax**
+_{(parameters) -> returnType in statement}_
+
 예제 소스)
+1. Example 1
+let simpleClosure = {}
+simpleClosure()
+
+2. Example 2
+let simpleClosure = {
+	print("Hello!")
+}
+simpleClosure()
+
+3. Example 3
+let inputClosure : (String) -> Void = { name in
+	print("my name is \(name)!")
+}
+inputClosure("이근재")
+
+4. Example 4
+let retureClosure : (String) -> String = { name in 
+	return "Hello \(name)~ How are you?"
+}
+
+5. Example 5
+func testFunction(simpleClosure : () -> Void){
+	print("testFunction")
+	simpleClosure()
+}
+
+testFunction(simpleClosure : {
+	print("simpleClosure")
+})
+
+
+6. Example 6
+func testFunction(message : String, simpleClosure : (String) -> Void){
+    print("testFunction \(message)...")
+    simpleClosure(message)
+}
+
+testFunction(message:"이근재", simpleClosure: { message in
+    print("\(message) simpleClosure")
+})
+
+
+
 var plus: (Int, Int) -> Int = {a, b in return a+b}
 var result=plus(1,5)
 
@@ -36,5 +85,3 @@ var voidClosure : () -> Void = {
 voidClosure()
 
 
-# 컴플리션 블록
-# 하이 오더 펑션
