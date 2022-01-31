@@ -3,3 +3,6 @@
 2. gc 메모리 누수
 
 [네이버](https://www.naver.com)
+
+
+자바 Generic 이 무엇인가?
