@@ -6,3 +6,9 @@
 
 
 자바 Generic 이 무엇인가?
+
+자바 <List>.stream().map()
+
+자바 Optional<List>
+
+하나의 로우를 클릭 했을 경우 다른 로우들은 false 상태로 만들기 JSX 구현
