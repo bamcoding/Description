@@ -9,9 +9,7 @@ Basic <ID>:<Password> 처럼 아이디와 비밀번호를 콜론으로 이어붙
 Base64로 인코딩한 문자열을 함께 보낸다.
 
 
-'''
 __Authoriztion: Basic aGVsbG93b3JsZEBnbWFpbC5jb206MTIzNA==__  
-'''
 
 
 문제점.. 인코딩은 보안을 목적으로 하는 것이 아니다.
@@ -41,3 +39,29 @@ Basic 인증 기법보다 보안 측면에서 좀 더 안전하다.
 
 ## 3. JSON 웹 토근 
 서버에서 **전자 서명된 토큰**을 이용하면 이증에 따른 스케일 문제를 해결할 수 있다.
+JWT는 JSON 형태로 된 토큰이다. 
+
+
+JWT 토큰은 아래의 요소로 구성된다.
+{header}.{payload}.{signature}
+__Authoriztion: Bearer aGVsbG93b3Js.ZEBnbWFpbC5jb.206MTIzNA==__ 
+
+
+[디코딩한 JWT 예]  
+```  {
+	"typ" : "JWT",
+	"alg" : "HS512"  
+}.  {
+	"sub" : "5243523524c3453425",
+	"iss" : "demo app",
+	"iat" : 123451214,
+	"exp" : 123451214
+}.  
+NqwerjwekrnKLNKL343234234234ADS
+```
+
+
+
+
+
+
