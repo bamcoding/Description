@@ -6,7 +6,7 @@
 이런 방법을 basic 인증이라고 한다.  
 basic  인증에서는 최초 로그인한 후 http 요청 헤더의 authorization 부분에
 Basic <ID>:<Password> 처럼 아이디와 비밀번호를 콜론으로 이어붙인 후 
-Base64로 인코딩한 문자열을 함께 보낸다.    
+Base64로 인코딩한 문자열을 함께 보낸다.<br/>
 __Authoriztion: Basic aGVsbG93b3JsZEBnbWFpbC5jb206MTIzNA==__  
 문제점.. 인코딩은 보안을 목적으로 하는 것이 아니다.
 육안으로 아이디와 비밀번호를 찾아내기 힘들지만 디코더만 있다면 누구나 디코딩해 원래의
