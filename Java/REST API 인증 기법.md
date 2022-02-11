@@ -9,7 +9,9 @@ Basic <ID>:<Password> 처럼 아이디와 비밀번호를 콜론으로 이어붙
 Base64로 인코딩한 문자열을 함께 보낸다.
 
 
+'''
 __Authoriztion: Basic aGVsbG93b3JsZEBnbWFpbC5jb206MTIzNA==__  
+'''
 
 
 문제점.. 인코딩은 보안을 목적으로 하는 것이 아니다.
