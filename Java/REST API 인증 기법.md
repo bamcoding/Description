@@ -6,8 +6,12 @@
 이런 방법을 basic 인증이라고 한다.  
 basic  인증에서는 최초 로그인한 후 http 요청 헤더의 authorization 부분에
 Basic <ID>:<Password> 처럼 아이디와 비밀번호를 콜론으로 이어붙인 후 
-Base64로 인코딩한 문자열을 함께 보낸다.<br/>
+Base64로 인코딩한 문자열을 함께 보낸다.
+
+
 __Authoriztion: Basic aGVsbG93b3JsZEBnbWFpbC5jb206MTIzNA==__  
+
+
 문제점.. 인코딩은 보안을 목적으로 하는 것이 아니다.
 육안으로 아이디와 비밀번호를 찾아내기 힘들지만 디코더만 있다면 누구나 디코딩해 원래의
 아이디와 비밀번호를 확인할 수 있다.  
@@ -23,7 +27,11 @@ __Authoriztion: Basic aGVsbG93b3JsZEBnbWFpbC5jb206MTIzNA==__
 토큰은 사용자를 구혈할 수 있는 문자열이다.
 토큰은 최초 로그인 시 서버가 만들어 준다. 서버가 자기만의 노하우로 토큰을 만들어 반환하면
 클라이언트는 이후 요청에 아이디와 비밀번호 대신 토큰을 계속 넘겨 자신이 인증된 사용자임을 알리는 것이다.  
+
+
 __Authoriztion: Bearer aGVsbG93b3JsZEBnbWFpbC5jb206MTIzNA==__ 
+
+
 토큰을 기반으로 하는 요청은 헤더에 Autoriztion: Bearer <TOKEN>을 명시한다.  
 Basic 인증 기법보다 보안 측면에서 좀 더 안전하다.
 또 서버가 토큰을 마음대로 생성할 수 있으므로 사용자의 인가정보 또는 유효 시간을 정해 관리할 수 있다. 하지만 Basic 인증에서 마주한 스케일 문제를 해결하지는 못한다.    
