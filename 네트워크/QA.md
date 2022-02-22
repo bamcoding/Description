@@ -32,6 +32,13 @@ DNS서버 IP에 app.bamcoding.com은 어디에 연결되어 있는가?
 ASG는 그 인스턴스를 제거하고 새 인스턴스를 실행시킨다.
 스케일인 스케일아웃...
 
+## Virtual Private Cloud
+there is a subnet in VPC.
+
+## 서브넷
+
+## 일라스틱 빈스톡
+
 
 
 사용자는 우리 프론트엔드 웹의 메인 화면을 보고 있다
